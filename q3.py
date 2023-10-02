@@ -32,7 +32,7 @@ for file_path in jsonl_files:
 
                     suffix = file_name[:2]  # Use the file_path prefix as a suffix
                     # Rename 'utt' column to make it unique
-                    df = df[selected_columns].
+                    df = df[selected_columns]
                     df = df.rename(columns={'utt': f'utt_{suffix}'})
 
                     merged_df = pd.merge(merged_df, df, on='id', how='inner')
